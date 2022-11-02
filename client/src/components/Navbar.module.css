@@ -1,0 +1,37 @@
+.navbar{
+    margin: 0 50px;
+    /* border-top: rgba(0 ,0 ,0, 0.2) 0.01px dashed; */
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 8px;
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+.navItem{
+    list-style: none;
+    width: fit-content;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.navItem:hover{
+    color: #1E90FF;
+    background: rgba(196, 196, 196, 0.2);
+}
+
+input[type="text"] {
+    width: 200px;
+    height: 20px;
+    padding-right: 50px;
+}
+
+input[type="submit"] {
+    height: 20px;
+    /* width: 50px; */
+}

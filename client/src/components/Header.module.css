@@ -1,0 +1,95 @@
+.topHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 0 30px;
+    border-bottom: rgba(0, 0, 0, 0.24) 0.01px dashed;
+    height: 90px;
+}
+
+.topThinBar{
+    height: 37px;
+    background: rgb(63, 63, 63);
+    color: white;
+    /* padding: 0 10px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.bnTitle{
+    background: #1E90FF;
+    padding: 8px 14px;
+    font-weight: 100;
+}
+
+.bn{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.searchInput{
+    /* border-radius: 6px; */
+    padding: 7px 12px;
+    outline: none;
+    border-bottom: rgb(63, 63, 63);
+    border: 0;
+    font-family: 'Gnuolane';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.searchBtn{
+    margin-right: 35px;
+    margin-left: 5px;
+    padding-right: 10px;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.searchLogo{
+    font-size: 22px;
+    margin-top: 3.5px;
+    margin-left: -65px;
+    cursor: pointer;
+    outline: none;
+}
+
+.socialIcon{
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+}
+
+.socialIcon:hover{
+    color: #1E90FF;
+}
+
+.header{
+    margin: 0 10px;
+    border-bottom: rgba(0, 0, 0, 0.25) 0.01px solid;
+}
+
+.date{
+    width: 200px;
+}
+
+.logo{
+    /* font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1.5px; */
+}
+
+.logoImg{
+    height: 294px;
+}
+
+.tempEtc{
+    width: 200px;
+    text-align: right;
+}
