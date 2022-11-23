@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './Header.module.css'
 import Navbar from './Navbar'
-import logo from '../images/yarmLogo1.png'
+import logo from 'D:/MERN/YAR_News/client/src/images/yarmLogo1.png'
 import Facebook from '@mui/icons-material/Facebook'
 import Instagram from '@mui/icons-material/Instagram'
 import Twitter from '@mui/icons-material/Twitter'
 import Search from '@mui/icons-material/Search'
+import Location from '@mui/icons-material/LocationOn'
+import Calender from '@mui/icons-material/CalendarMonth'
 
 
 function Header() {
@@ -20,7 +22,7 @@ function Header() {
     <div className={styles.header}>
         <div className={styles.topThinBar}>
             <span className={styles.bnTitle}>Breaking News</span>
-            <span className={styles.bn}>Ek Chutiye ke kaaran hui ek bsd wale ki hatya !!!$@#!!!</span>
+            <span className={styles.bn}>Delhi Man's Head Smashed With Frying Pan, Wife Killed Too By Ex-Employee</span>
             <input type="text" className={styles.searchInput} placeholder='Search News' />
             {/* <input type="submit" value='' /> */}
             <button type="submit" className={styles.searchBtn}><Search className={styles.searchLogo} /></button>
@@ -31,9 +33,9 @@ function Header() {
             </div>
         </div>
         <div className={styles.topHeader}>
-            <div className={styles.date}>{days[day]+', '+ date + ' ' + months[month] + ', ' + year}</div>
+            <div className={styles.date}><Calender className={styles.locationIcon} />&nbsp;{days[day]+', '+ date + ' ' + months[month] + ', ' + year}<br /><Location className={styles.locationIcon} />&nbsp;India</div>
             <div className={styles.logo}><img src={logo} className={styles.logoImg} alt="" /></div>
-            <div className={styles.tempEtc}>32 &#176;C</div>
+            <div className={styles.tempEtc}>32 &#176;C <br /><b>NIFTY: </b><span style={{color: 'rgb(0, 200, 0)'}}>18,082.85</span><br /><b>SENSEX: </b><span style={{color:'red'}}>60,906.09</span></div>
         </div>
         <Navbar />
     </div>

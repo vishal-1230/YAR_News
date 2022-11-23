@@ -1,12 +1,11 @@
 import './App.css';
-import Header from './components/Header';
-import Newsarea from './components/Newsarea';
+import Homepage from './Homepage/Homepage';
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Newsarea />
+      <Homepage />
     </div>
   );
 }

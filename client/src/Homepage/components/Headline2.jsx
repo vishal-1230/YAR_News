@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Headline.module.css'
+import styles from './Headline2.module.css'
 
-function Headline(props) {
+function Headline2(props) {
   return (
     <div className={styles.headline}>
         <img src={props.img} className={styles.headlineImage} alt="" />
@@ -9,8 +9,9 @@ function Headline(props) {
             <p className={styles.headlineTitle}>{props.title}</p>
             <p className={styles.headlineTexts}>{props.text}</p>
         </div>
+        
     </div>
   )
 }
 
-export default Headline
+export default Headline2

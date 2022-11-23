@@ -85,8 +85,16 @@
     letter-spacing: 1.5px; */
 }
 
+.locationIcon{
+    font-size: 18px;
+    margin-left: -4px;
+    margin-top: 10px;
+    vertical-align: sub;
+}
+
 .logoImg{
     height: 294px;
+    color: rgb(0, 223, 0)
 }
 
 .tempEtc{
