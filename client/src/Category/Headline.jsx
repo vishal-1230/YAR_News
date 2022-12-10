@@ -9,7 +9,7 @@ function Headline(props) {
             <p className={styles.headlineTitle}>{props.title}</p>
             <p className={styles.headlineTexts}>{props.text}</p>
         </div>
-        <div className={styles.date}>Jan 4, 2022</div>
+        <div className={styles.date}>{props.date}</div>
     </div>
   )
 }

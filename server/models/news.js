@@ -8,6 +8,6 @@ const newsSchema = new mongoose.Schema({
     body:String,
     authorUrl: String,
     authorName: String
-})
+}, {timestamps:true})
 
 export default mongoose.model('news', newsSchema)

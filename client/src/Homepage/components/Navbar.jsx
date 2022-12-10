@@ -30,16 +30,16 @@ function Navbar(props) {
   return (
     <div className={styles.navbar}>
         <ul className={styles.navList}>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/india'><li className={styles.navItem} id='india'>India</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/finance'><li className={styles.navItem} id='finance'>Finance</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/world'><li className={styles.navItem} id='world'>World</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/politics'><li className={styles.navItem} id='politics'>Politics</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/business'><li className={styles.navItem} id='business'>Business</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/technology'><li className={styles.navItem} id='technology'>Technology</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/education'><li className={styles.navItem} id='education'>Education</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/health'><li className={styles.navItem} id='health'>Health</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/sports'><li className={styles.navItem} id='sports'>Sports</li></Link>
-            <Link style={{textDecoration: 'none', color:'black'}} to='/entertainment'><li className={styles.navItem} id='entertainment'>Entertainment</li></Link>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/india'><li className={styles.navItem} id='india'>India</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/finance'><li className={styles.navItem} id='finance'>Finance</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/world'><li className={styles.navItem} id='world'>World</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/politics'><li className={styles.navItem} id='politics'>Politics</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/business'><li className={styles.navItem} id='business'>Business</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/technology'><li className={styles.navItem} id='technology'>Technology</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/education'><li className={styles.navItem} id='education'>Education</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/health'><li className={styles.navItem} id='health'>Health</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/sports'><li className={styles.navItem} id='sports'>Sports</li></a>
+            <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://localhost:3000/entertainment'><li className={styles.navItem} id='entertainment'>Entertainment</li></a>
         </ul>
     </div>
   )

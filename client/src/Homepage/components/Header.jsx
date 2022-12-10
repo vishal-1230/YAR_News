@@ -36,7 +36,7 @@ function Header(props) {
         <div className={styles.topHeader}>
             <div className={styles.date}><Calender className={styles.locationIcon} />&nbsp;{days[day]+', '+ date + ' ' + months[month] + ', ' + year}<br /><Location className={styles.locationIcon} />&nbsp;India</div>
             <Link to='/'><div className={styles.logo}><img src={logo} className={styles.logoImg} alt="" /></div></Link>
-            <div className={styles.tempEtc}>32 &#176;C <br /><b>NIFTY: </b><span style={{color: 'rgb(0, 200, 0)'}}>18,082.85</span><br /><b>SENSEX: </b><span style={{color:'red'}}>60,906.09</span></div>
+            <div className={styles.tempEtc}>30 &#176;C <br /><b>NIFTY: </b><span style={{color: 'rgb(0, 200, 0)'}}>18,496.60</span><br /><b>SENSEX: </b><span style={{color:'red'}}>62,181.67</span></div>
         </div>
         <Navbar highlight={props.highlight} />
     </div>

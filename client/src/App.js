@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path='/' element={<Homepage />} />
-        <Route path='/newsSingle' element={<SingleNews />} />
+        <Route path='/news/:nid' element={<SingleNews />} />
         <Route path='/india' element={<CategoryNews category='india' />} />
         <Route path='/finance' element={<CategoryNews category='finance' />} />
         <Route path='/world' element={<CategoryNews category='world' />} />
