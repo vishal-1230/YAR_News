@@ -2,6 +2,8 @@
     /* background: rgb(75, 75, 75); */
     background: #404040;
     margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footerLeft{
@@ -46,4 +48,32 @@
     letter-spacing: 0.8px;
     font-size: 17px;
     margin-bottom: 20px;
+}
+
+.footerRight{
+    padding-right: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: rgb(184, 184, 184);
+    text-align: right;
+    line-height: 2px;
+}
+
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.footerLink{
+    line-height: 30px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    height: fit-content;
+}
+
+.copyright{
+    color: #fff;
+    letter-spacing: 1px;
 }

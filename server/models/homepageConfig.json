@@ -1,0 +1,13 @@
+{
+    "headline_1":"1",
+    "headline_2":"2",
+    "headline_3":"3",
+    "breaking_news":[""],
+    "india_featured":["12", "8"],
+    "politics_featured":[""],
+    "finance_featured":["10"],
+    "world_featured":["11", "6"],
+    "business_featured":[""],
+    "entertainment_featured":["7"],
+    "latest_headlines":["4", "6", "8", "10", "12", "7", "11"]
+}

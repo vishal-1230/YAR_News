@@ -1,0 +1,148 @@
+.newsArea{
+    display: flex;
+    margin: 0 40px;
+    margin-left: 60px;
+    padding-top: 20px;
+    flex-grow: 1;
+}
+
+.leftNews{
+    padding-right: 20px;
+    border-right: #ccc 0.1px solid;
+}
+
+.newsRight{
+    padding-left: 20px;
+    /* margin-left: 15px; */
+}
+
+.newsTitle{
+    font-size: 37px;
+    letter-spacing: 1px;
+}
+
+.newsAbout{
+    margin-bottom: 14px;
+}
+
+.author{
+    padding-right: 10px;
+    border-right: #bbb 0.1px solid;
+    letter-spacing: 0.7px;
+}
+
+.date{
+    padding-left: 10px;
+    letter-spacing: 0.1px;
+}
+
+.newsImg{
+    /* width: 300px; */
+    /* margin-top: 10px; */
+    max-width: 100%;
+    margin-bottom: 40px;
+    /* width: min-content; */
+}
+
+.textDiv{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.newsText{
+    margin-top: 40px;
+    letter-spacing: 0.6px;
+    line-height: 27px;
+    font-size: 22px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.category{
+    padding: 4.5px 9px;
+    letter-spacing: 0.7px;
+    background-color: #1E90FF;
+    background: #00cec9;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    width: fit-content;
+}
+
+.topHeadlinesTitle{
+    font-size: 24px;
+    letter-spacing: 0.8px;
+    margin-left: 7px;
+    font-weight: 900;
+}
+
+.socials{
+    background: rgb(255, 96, 22);
+    background: #a29bfe;
+    background: #55efc4;
+    background: #00cec9;
+    color: white;
+    /* color: black; */
+    letter-spacing: 1px;
+    margin-top: 8px;
+    border-radius: 4px;
+    padding: 0px 15px;
+    padding-top: 4px;
+    padding-bottom: 25px;
+    font-size: large;
+}
+
+.socialIcons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: larger;
+}
+
+.subscribeDiv{
+    margin: 8px;
+    margin-top: 18px;
+    padding: 28px;
+    padding-top: 8px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+    text-align: center
+}
+
+.subscribeInput{
+    padding: 10px 16px;
+    font-family: 'Gnuolane';
+    letter-spacing: 0.3px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.subscribeBtn{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    font-family: Gnuolane;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    border: #1E90FF 2px solid;
+    background: transparent;
+    background: #1E90FF;
+    /* color: #1E90FF; */
+    color: white;
+    cursor: pointer;
+    transition-duration: 75ms;
+}
+
+.subscribeBtn:hover{
+    background: #1E90FF;
+    background: transparent;
+    color: white;
+    color: #1E90FF;
+    border: #1E90FF 2px solid;
+}
+
+.subscribeSubheading{
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}

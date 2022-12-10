@@ -17,6 +17,15 @@ function Footer() {
             <FaYoutube className={styles.footerSocialIcon} />
         </div>
         </div>
+        <div className={styles.footerRight}>
+          <div className={styles.footerLinks}>
+            <span className={styles.footerLink}>Terms & Condition</span>
+            <span className={styles.footerLink}>Contact Us</span>
+            <span className={styles.footerLink}>About Us</span>
+            <span className={styles.footerLink}>Privacy Policy</span>
+          </div>
+          <span className={styles.copyright}>Copyright 2022 © All rights reserved Youth Against Rape Community</span>
+        </div>
     </div>
   )
 }

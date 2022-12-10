@@ -1,0 +1,72 @@
+.catHeading{
+    font-weight: bolder;
+    margin-left: 30px;
+    padding-left: 20px;
+    margin-top: 30px;
+    border-bottom: 0.01px solid #eee;
+    padding-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+.newsArea{
+    display: flex;
+    margin: 0 50px;
+    margin-top: -8px;
+}
+
+.leftNewsList{
+    flex-grow: 1;
+    /* background: #ab2839; */
+    padding-right: 15px;
+    border-right: #ddd 0.01px solid;
+}
+
+.right{
+    width: 800px;
+    /* background: #23455c; */
+    padding-left: 15px;
+}
+
+.subscribeDiv{
+    margin: 8px;
+    margin-top: 18px;
+    padding: 28px;
+    padding-top: 8px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
+    text-align: center
+}
+
+.subscribeInput{
+    padding: 10px 16px;
+    font-family: 'Gnuolane';
+    letter-spacing: 0.3px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.subscribeBtn{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+    font-family: Gnuolane;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+    border: #1E90FF 2px solid;
+    background: transparent;
+    background: #1E90FF;
+    /* color: #1E90FF; */
+    color: white;
+    cursor: pointer;
+    transition-duration: 75ms;
+}
+
+
+.subscribeBtn:hover{
+    background: #1E90FF;
+    background: transparent;
+    color: white;
+    color: #1E90FF;
+    border: #1E90FF 2px solid;
+}
+

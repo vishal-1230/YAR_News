@@ -1,0 +1,48 @@
+/* 'flex align-middle justify-between h-28 border-b-grey1 border-2 border-white' */
+
+.header{
+    display: flex;
+    /* text-align: middle; */
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 28rem; */
+    border-bottom: #e0e0e0 1px solid;
+}
+
+.logo{
+    width: 210px;
+    height: 100px;
+    margin-left: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.date{
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.dateLoc{
+    margin-right: 40px;
+    vertical-align: middle;
+}
+
+.locationIcon{
+    font-size: 22px;
+    margin-left: -4px;
+    margin-top: 10px;
+    vertical-align: sub;
+}
+
+.logoImg{
+    height: 294px;
+    color: rgb(0, 223, 0)
+}
+
+.tempEtc{
+    width: 200px;
+    text-align: right;
+}

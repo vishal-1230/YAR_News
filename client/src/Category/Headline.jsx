@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styles from './Headline.module.css'
 
 function Headline(props) {
@@ -10,7 +9,7 @@ function Headline(props) {
             <p className={styles.headlineTitle}>{props.title}</p>
             <p className={styles.headlineTexts}>{props.text}</p>
         </div>
-        
+        <div className={styles.date}>Jan 4, 2022</div>
     </div>
   )
 }

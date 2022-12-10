@@ -137,13 +137,14 @@
     padding-top: 5px;
     border-bottom: 0.1px solid #ccc;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 #finance{
     border-top: #bbb 0.1px solid !important;
     border-bottom: 0 solid #000;
     border-right: #bbb 0.1px solid;
-    /* border-left: 0.1px solid #bbb; */
+    border-left: 0.1px solid #bbb;
     font-weight: 600;
     /* background: #efefef; */
     /* color: #1E90FF; */

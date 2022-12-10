@@ -5,7 +5,7 @@ import Newsarea from './components/Newsarea'
 
 function Homepage() {
   return (
-    <div>
+    <div className='all-initial'>
         <Header />
         <Newsarea />
         <Footer />
