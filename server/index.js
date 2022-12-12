@@ -12,7 +12,7 @@ const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cors({
-    origin: "http://localhost:3000"
+    origin: "http://156.67.219.185:3000"
 }))
 dotenv.config()
 
