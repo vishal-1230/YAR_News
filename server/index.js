@@ -6,18 +6,18 @@
 // import newsOverview from './models/newsOverview.js'
 // import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
 // import news from './models/news.js'
+
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const dotenv = require('dotenv')
-const fs = requier('fs')
+const fs = require('fs')
 const newsOverview = require('./models/newsOverview.js')
-const homepageConfig = require('./models/homepageConfig.json')
+const homepageConfig = require('./models/homepageConfig.json', {assert: {type: 'json'}})
 const news = require('./models/news.js')
 
 
 const app=express()
-
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cors({
