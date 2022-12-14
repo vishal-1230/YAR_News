@@ -4,7 +4,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 // import fs from 'fs'
 import newsOverview from './models/newsOverview.js'
-import homepageConfig from './models/homepageConfig.json'
+import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
 import news from './models/news.js'
 
 // const express = require('express')
