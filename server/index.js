@@ -1,20 +1,20 @@
-// import express, { json } from 'express'
-// import mongoose from 'mongoose'
-// import cors from "cors"
-// import dotenv from "dotenv"
+import express, { json } from 'express'
+import mongoose from 'mongoose'
+import cors from "cors"
+import dotenv from "dotenv"
 // import fs from 'fs'
-// import newsOverview from './models/newsOverview.js'
-// import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
-// import news from './models/news.js'
+import newsOverview from './models/newsOverview.js'
+import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
+import news from './models/news.js'
 
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
-const dotenv = require('dotenv')
-const fs = require('fs')
-const newsOverview = require('./models/newsOverview.js')
-const homepageConfig = require('./models/homepageConfig.json', {assert: {type: 'json'}})
-const news = require('./models/news.js')
+// const express = require('express')
+// const mongoose = require('mongoose')
+// const cors = require('cors')
+// const dotenv = require('dotenv')
+// const fs = require('fs')
+// const newsOverview = require('./models/newsOverview.js')
+// const homepageConfig = require('./models/homepageConfig.json', {assert: {type: 'json'}})
+// const news = require('./models/news.js')
 
 
 const app=express()
@@ -118,3 +118,6 @@ app.listen(port)
 
 // console.log(await news.find({}).sort({createdAt:1}).limit(20))
 
+
+
+// $$$$$$$ underplay $$$$$$
