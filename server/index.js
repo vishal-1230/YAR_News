@@ -34,6 +34,7 @@ const db=mongoose.connection
 
 app.get('/', (req, res)=>{
     res.send('Server Connected Successfully!!!')
+    console.log('Server Connected!!!');
 })
 
 app.get('/homepageData', (req, res)=>{
