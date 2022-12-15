@@ -106,7 +106,7 @@ app.get('/getNews', (req, res)=>{
 })
 
 // console.log('Man stabs woman to death in Bihar over money, 2 arrested'=='Man stabs woman to death in Bihar over money, 2 arrested')
-app.listen(port)
+app.listen(8000)
 
 // function a(){
     // let newses=[
