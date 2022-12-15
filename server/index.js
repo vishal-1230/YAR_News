@@ -32,6 +32,10 @@ mongoose.connect(mongodb, (err)=>{if(err) throw err; console.log('connected')})
 const db=mongoose.connection
 
 
+app.get('/', (req, res)=>{
+    res.send('Server Connected Successfully!!!')
+})
+
 app.get('/homepageData', (req, res)=>{
     const homeConfig = JSON.parse(JSON.stringify({
         "headline_1":"1",
