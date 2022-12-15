@@ -4,7 +4,7 @@ import cors from "cors"
 import dotenv from "dotenv"
 // import fs from 'fs'
 import newsOverview from './models/newsOverview.js'
-import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
+// import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
 import news from './models/news.js'
 
 // const express = require('express')
@@ -33,7 +33,22 @@ const db=mongoose.connection
 
 
 app.get('/homepageData', (req, res)=>{
-    const homeConfig = JSON.parse(JSON.stringify(homepageConfig))
+    const homeConfig = JSON.parse(JSON.stringify({
+        "headline_1":"1",
+        "headline_2":"2",
+        "headline_3":"3",
+        "breaking_news":[""],
+        "india_featured":"india",
+        "politics_featured":"politics",
+        "finance_featured":"finance",
+        "world_featured":"world",
+        "business_featured":"business",
+        "entertainment_featured":"entertainment",
+        "technology_featured":"technology",
+        "education_featured":"education",
+        "health_featured":"health",
+        "latest_headlines":["4", "6", "8", "10", "12", "7", "11"]
+    }))
     let obj = {}
         Object.keys(homeConfig).map((i)=>{
             console.log(i);
