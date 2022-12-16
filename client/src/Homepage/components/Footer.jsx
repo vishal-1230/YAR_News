@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css'
-import logo from 'yarmLogo1.png'
+import logo from './yarmLogo1.png'
 import {MdFacebook} from 'react-icons/md'
 import {FaTwitter, FaFacebook, FaRss, FaYoutube} from 'react-icons/fa'
 
