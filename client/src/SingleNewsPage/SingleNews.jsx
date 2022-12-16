@@ -13,6 +13,7 @@ function SingleNews(props) {
   
   let params = useParams()
   useEffect(()=>{
+    console.log('params=>', params.nid);
     async function loadNews(){
       // alert('loading')
       const response = await fetch(`http://156.67.219.185:8800/getNews?nid=${params.nid}`)
