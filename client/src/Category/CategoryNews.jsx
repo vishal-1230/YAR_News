@@ -13,7 +13,7 @@ function CategoryNews(props) {
 
   useEffect(()=>{
     async function loadNews(){
-      const response = await fetch('http://156.67.219.185:8800/api/homepageData')
+      const response = await fetch('http://156.67.219.185:8800/homepageData')
       const data = await response.json()
 
       setnewsList(JSON.stringify(data[props.category+"_featured"]))
