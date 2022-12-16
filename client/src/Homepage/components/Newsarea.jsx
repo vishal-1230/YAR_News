@@ -51,7 +51,7 @@ function Newsarea() {
         document.getElementById('businessSmall').style=''
         document.getElementById('entertainmentSmall').style='border-right: 0;'
         document.getElementById(cat+'Small').style='border-top: #bbb 0.1px solid !important; border-bottom: 0 solid #000; border-right: #bbb 0.1px solid; border-left: 0.1px solid #bbb; font-weight: 600;'
-        const response = await fetch(`http://156.67.219.185:8800/homepageData`)
+        const response = await fetch(`http://156.67.219.185:8800/api/homepageData`)
         const data = await response.json()
         setcategoryHighlites(JSON.stringify(data[cat+"_featured"]))
         setcategoryHighlitesLoaded(true)
@@ -59,7 +59,7 @@ function Newsarea() {
 
     useEffect(()=>{
         async function getNewsOverview(){
-            const response = await fetch('http://156.67.219.185:8800/homepageData')
+            const response = await fetch('http://156.67.219.185:8800/api/homepageData')
             const data = await response.json()
             console.log("$$$$$$$$ NEWS DATA $$$$$$$$")
             document.getElementById('mainHeadlineImg').src=data['headline_1'][0].img
