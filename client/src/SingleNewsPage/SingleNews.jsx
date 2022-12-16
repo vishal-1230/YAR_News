@@ -63,7 +63,7 @@ function SingleNews(props) {
                 <div className={styles.topHeadlines}>
                   {
                     featuredNewsLoaded ? JSON.parse(featuredNews).map((i)=>{
-                      return <a key={i[0].title} style={{textDecoration:'none'}} href={'http://156.67.219.185:3000/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></a>
+                      return <a key={i[0].title} style={{textDecoration:'none'}} href={'http://156.67.219.185/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></a>
                     }):''
                   }
                     {/* <Headline img='https://akm-img-a-in.tosshub.com/indiatoday/images/story/202211/sachin_pilot-sixteen_nine.jpg?VersionId=IBfOJrOM_Uwaua3WZSrPo7B1Naxnvszy&size=690:388' title="'Very interesting': Sachin Pilot on PM Modi praising Ashok Gehlot" text='Sachin Pilot said PM Modi praising Rajasthan Chief Minister Ashok Gehlot should not be taken light...' />
