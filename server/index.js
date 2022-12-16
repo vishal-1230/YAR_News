@@ -20,9 +20,7 @@ import news from './models/news.js'
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-// app.use(cors({
-//     origin: "http://156.67.219.185:3000"
-// }))
+app.use(cors())
 dotenv.config()
 
 const port = process.env.PORT || 8800
