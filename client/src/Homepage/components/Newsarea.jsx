@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './Newsarea.module.css'
 import Headline from './Headline'
 import Headline2 from './Headline2'
-import logo from 'D:/MERN/YAR_News/client/src/images/yarmLogo1.png'
+// import logo from 'D:/MERN/YAR_News/client/src/images/yarmLogo1.png'
 import { Link } from 'react-router-dom'
 
 function Newsarea() {
