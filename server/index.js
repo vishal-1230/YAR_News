@@ -20,12 +20,12 @@ import news from './models/news.js'
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use(cors({
-    origin: "http://156.67.219.185:3000"
-}))
+// app.use(cors({
+//     origin: "http://156.67.219.185:3000"
+// }))
 dotenv.config()
 
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 8800
 const mongodb= process.env.MONGO_DB
 
 mongoose.connect(mongodb, (err)=>{if(err) throw err; console.log('connected')})
