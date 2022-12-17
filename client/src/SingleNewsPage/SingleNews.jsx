@@ -10,6 +10,7 @@ function SingleNews(props) {
 
   const [featuredNews, setfeaturedNews] = useState('')
   const [featuredNewsLoaded, setfeaturedNewsLoaded] = useState(false)
+  window.location.reload()
   
   let params = useParams()
   useEffect(()=>{
