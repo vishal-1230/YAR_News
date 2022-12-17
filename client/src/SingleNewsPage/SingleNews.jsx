@@ -63,7 +63,7 @@ function SingleNews(props) {
                 <div className={styles.topHeadlines}>
                   {
                     featuredNewsLoaded ? JSON.parse(featuredNews).map((i)=>{
-                      return <Link key={i[0].title} style={{textDecoration:'none'}} onClick={()=>{window.location.reload()}} to={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></Link>
+                      return <Link key={i[0].title} style={{textDecoration:'none'}} to={'/news/'+i[0].id}><Headline onClick={()=>{window.location.reload()}} img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></Link>
                       // return <Link key={i[0].title} style={{textDecoration:'none'}} to={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></Link>
                     }):''
                   }
