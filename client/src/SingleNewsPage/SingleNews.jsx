@@ -20,13 +20,6 @@ function SingleNews(props) {
       const data = await response.json()
       console.log(data);
 
-      const response2 = await fetch(`http://156.67.219.185:8800/homepageData`)
-      const data2 = await response2.json()
-      console.log('data2==>', data2);
-      setfeaturedNews(JSON.stringify(data2['latest_headlines']))
-      setfeaturedNewsLoaded(true)
-
-
       console.log(data[0].category);
       console.log(data[0].category.charAt(0));
       // console.log(data[0].category.charAt(0).toUpperCase());
@@ -40,6 +33,17 @@ function SingleNews(props) {
       // alert(params.nid)
     }
     loadNews()
+  })
+
+  useEffect(()=>{
+    async function loadFeatured(){
+      const response2 = await fetch(`http://156.67.219.185:8800/homepageData`)
+      const data2 = await response2.json()
+      console.log('data2==>', data2);
+      setfeaturedNews(JSON.stringify(data2['latest_headlines']))
+      setfeaturedNewsLoaded(true)
+    }
+    loadFeatured()
   }, [])
 
   return (
@@ -63,7 +67,7 @@ function SingleNews(props) {
                 <div className={styles.topHeadlines}>
                   {
                     featuredNewsLoaded ? JSON.parse(featuredNews).map((i)=>{
-                      return <a key={i[0].title} style={{textDecoration:'none'}} href={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></a>
+                      return <Link key={i[0].title} style={{textDecoration:'none'}} to={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></Link>
                       // return <Link key={i[0].title} style={{textDecoration:'none'}} to={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title.split(" ").splice(0,11).join(" ")+"..."} text={i[0].smallBody.split(" ").splice(0,11).join(" ")+'...'} /></Link>
                     }):''
                   }
