@@ -2,10 +2,10 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from "cors"
 import dotenv from "dotenv"
-// import fs from 'fs'
 import newsOverview from './models/newsOverview.js'
-// import homepageConfig from './models/homepageConfig.json' assert {type: 'json'}
 import news from './models/news.js'
+import multer from 'multer'
+const upload = multer({ dest: "uploads/" });
 
 // const express = require('express')
 // const mongoose = require('mongoose')
@@ -110,6 +110,16 @@ app.get('/getNews', (req, res)=>{
 
 app.get('/trial', (req, res)=>{
     res.sendStatus(200)
+})
+
+app.post('/uploadNewsByAdmin', (req, res)=>{
+    const id=req.body.id
+    const title=req.body.title
+    const body=req.body.newsBody
+    const img = req.body.img
+    console.log('News Uploaded');
+    console.log(id, title, body, img);
+    // news.create({})
 })
 
 // console.log('Man stabs woman to death in Bihar over money, 2 arrested'=='Man stabs woman to death in Bihar over money, 2 arrested')
