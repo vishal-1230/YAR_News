@@ -25,7 +25,6 @@ function Header(props) {
             <span className={styles.bnTitle}>Breaking News</span>
             <span className={styles.bn}>Delhi Man's Head Smashed With Frying Pan, Wife Killed Too By Ex-Employee</span>
             <input type="text" className={styles.searchInput} placeholder='Search News' />
-            {/* <input type="submit" value='' /> */}
             <button type="submit" className={styles.searchBtn}><Search className={styles.searchLogo} /></button>
             <div className={styles.socialMedias}>
                 <a href="" target='_blank' className={styles.socialIcon}><Facebook /></a>

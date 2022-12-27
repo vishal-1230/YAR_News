@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaRegObjectUngroup } from 'react-icons/fa'
 import Footer from '../Homepage/components/Footer'
 import Header from '../Homepage/components/Header'
 import styles from './CategoryNews.module.css'
@@ -13,11 +12,13 @@ function CategoryNews(props) {
 
   useEffect(()=>{
     async function loadNews(){
-      const response = await fetch('http://156.67.219.185:8800/homepageData')
+      // const response = await fetch('http://156.67.219.185:8800/homepageData')
+      const response = await fetch(`http://156.67.219.185:8800/getCategoryNews?category=${props.category}`)
       const data = await response.json()
+      console.log(data)
 
-      setnewsList(JSON.stringify(data[props.category+"_featured"]))
-      // if ()
+      // setnewsList(JSON.stringify(data[props.category+"_featured"]))
+      setnewsList(JSON.stringify(data))
       setnewsListLoaded(true)
     }
     loadNews()
@@ -33,7 +34,7 @@ function CategoryNews(props) {
             newsListLoaded ? JSON.parse(newsList).map((i)=>{
               console.log(i[0]);
               // return <a key={i[0].title} style={{textDecoration:'none', color: 'black'}} href={'http://156.67.219.185/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title} text={i[0].smallBody} date={new Date(i[0].createdAt).toUTCString()} /></a>
-              return <Link key={i[0].title} style={{textDecoration:'none', color: 'black'}} to={'/news/'+i[0].id}><Headline img={i[0].img} title={i[0].title} text={i[0].smallBody} date={new Date(i[0].createdAt).toUTCString()} /></Link>
+              return <Link key={i.title} style={{textDecoration:'none', color: 'black'}} to={'/news/'+i.id}><Headline img={i.img} title={i.title} text={i.smallBody} date={new Date(i.createdAt).toUTCString()} /></Link>
 
             }):''
           }

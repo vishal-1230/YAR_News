@@ -23,13 +23,10 @@ function App() {
       <div className="left">
         <h1>Upload News</h1>
         <form action='http://localhost:8800/uploadNewsByAdmin' method='post' preventDefault id="form">
-            <label htmlFor="">News ID</label>
-            <input type="number" name="id" required id="id" /><br />
             <label htmlFor="">Title</label>
             <input type="text" placeholder="Title of News" required name="title" id="title" /><br />
             <label htmlFor="">Body</label>
             <textarea name="newsBody" id="newsBody" required style={{fontFamily: 'sans-serif'}} placeholder='News Content' cols="30" rows="10"></textarea><br />
-            {/* <input type="textarea" placeholder="News Content" name="newsBody" id="newsBody" required /><br /> */}
             <select name="category" id="category" required>
                 <option value="" disabled selected>Select News Category</option>
                 <option value="india">India</option>
@@ -52,12 +49,6 @@ function App() {
             <h2>Top 3 Headlines</h2>
         </div>
       </div>
-      {/* <div className="right" style={{flexGrow: 1}}>
-        <h1>News for Approvals</h1>
-      </div>
-      <div className="right2" style={{flexGrow: 1}}>
-        <h1>News List</h1>
-      </div> */}
     </div>
   );
 }
