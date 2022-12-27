@@ -3,29 +3,18 @@ import './App.module.css';
 
 function App() {
 
-  const uploadNews = async ()=>{
-    const id = document.getElementById("id");
-    const title = document.getElementById("title");
-    const newsBody = document.getElementById("title");
-    const smallBody = document.getElementById("smallBody")
-    const category = document.getElementById("category");
-    const img = document.getElementById("img");
-    alert('title=>', title.value)
-    alert('smallBody=>', smallBody.value)
-    alert('category=>', category.value)
-    alert('img=>', img.value)
+  const uploadNews = async (e)=>{
+    e.preventDefault()
     const formData = new FormData();
-    formData.append("id", id.value);
-    formData.append("title", title.value);
-    formData.append("newsBody", newsBody.value);
-    formData.append("category", category.value);
-    formData.append("img", img.value)
-    const response = await fetch("http://localhost:8800/uploadNewsByAdmin", {
+    formData.append("id", document.getElementById('id').value);
+    alert(document.getElementById('id').value)
+    formData.append("title", document.getElementById('title').value);
+    formData.append("newsBody", document.getElementById('newsBody').value);
+    formData.append("category", document.getElementById('category').value);
+    formData.append("img", document.getElementById('img').value)
+    await fetch("http://localhost:8800/uploadNewsByAdmin", {
         method: 'POST',
         body: formData,
-        headers: {
-          "Content-Type": "multipart/form-data",
-        }
     })
   }
 
@@ -33,13 +22,13 @@ function App() {
     <div className="App">
       <div className="left">
         <h1>Upload News</h1>
-        <form action="" onSubmit={uploadNews} enctype="multipart/form-data" method="post" id="form">
+        <form action='http://localhost:8800/uploadNewsByAdmin' method='post' preventDefault id="form">
             <label htmlFor="">News ID</label>
-            <input type="number" name="id" id="id" required /><br />
+            <input type="number" name="id" required id="id" /><br />
             <label htmlFor="">Title</label>
-            <input type="text" placeholder="Title of News" name="title" id="title" required /><br />
+            <input type="text" placeholder="Title of News" required name="title" id="title" /><br />
             <label htmlFor="">Body</label>
-            <textarea name="newsBody" id="newsBody" style={{fontFamily: 'sans-serif'}} placeholder='News Content' cols="30" rows="10"></textarea>
+            <textarea name="newsBody" id="newsBody" required style={{fontFamily: 'sans-serif'}} placeholder='News Content' cols="30" rows="10"></textarea><br />
             {/* <input type="textarea" placeholder="News Content" name="newsBody" id="newsBody" required /><br /> */}
             <select name="category" id="category" required>
                 <option value="" disabled selected>Select News Category</option>
@@ -54,11 +43,10 @@ function App() {
                 <option value="sports">Sports</option>
                 <option value="entertainment">Entertainment</option>
             </select><br />
-            <label htmlFor="">News Image</label>
-            <input type="file" name="img" id="img" required src="" alt="" /><br />
+            <label htmlFor="">News Image URL</label><br />
+            <input type="text" name="img" id="img" required placeholder='Image URL' /><br />
             <button type="submit" id="submit">UPLOAD</button>
         </form>
-        <iframe width="1366" height="768" src="https://www.youtube.com/embed/_x4PKIJ6JVI" title="INTERFERENCE PART 1.4 young's double slit experiment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <hr />
         <div className="updateHomepage">
             <h2>Top 3 Headlines</h2>

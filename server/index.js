@@ -4,8 +4,9 @@ import cors from "cors"
 import dotenv from "dotenv"
 import newsOverview from './models/newsOverview.js'
 import news from './models/news.js'
-import multer from 'multer'
-const upload = multer({ dest: "uploads/" });
+// import multer from 'multer'
+import bodyParser from 'body-parser'
+// const upload = multer({ dest: "uploads/" });
 
 // const express = require('express')
 // const mongoose = require('mongoose')
@@ -20,6 +21,7 @@ const upload = multer({ dest: "uploads/" });
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(cors())
 dotenv.config()
 
@@ -113,12 +115,17 @@ app.get('/trial', (req, res)=>{
 })
 
 app.post('/uploadNewsByAdmin', (req, res)=>{
+    console.log(req.body);
     const id=req.body.id
     const title=req.body.title
+    const category=req.body.category
     const body=req.body.newsBody
     const img = req.body.img
     console.log('News Uploaded');
     console.log(id, title, body, img);
+    news.create({id: id, category:category, title: title, body: body, img: img, authorName: 'Admin', authorUrl: 'https://instagram.com/piyush7teen'})
+    newsOverview.create({id: id, category: category, title: title, img: img, smallBody: body.split(" ").splice(0,60).join(" ")})
+    res.status(200).send('News Uploaded')
     // news.create({})
 })
 
