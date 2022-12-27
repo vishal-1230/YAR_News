@@ -1,28 +1,27 @@
 // import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.module.css';
 
 function App() {
+  const [featured, setfeatured] = useState('')
+  const [featuredLoaded, setfeaturedLoaded] = useState(false)
 
-  const uploadNews = async (e)=>{
-    e.preventDefault()
-    const formData = new FormData();
-    formData.append("id", document.getElementById('id').value);
-    alert(document.getElementById('id').value)
-    formData.append("title", document.getElementById('title').value);
-    formData.append("newsBody", document.getElementById('newsBody').value);
-    formData.append("category", document.getElementById('category').value);
-    formData.append("img", document.getElementById('img').value)
-    await fetch("http://localhost:8800/uploadNewsByAdmin", {
-        method: 'POST',
-        body: formData,
-    })
-  }
+  useEffect(()=>{
+    async function getHompageConfig(){
+      const response = await fetch('http://localhost:8800/getHomepageConfig')
+      const data = await response.json()
+
+      setfeatured(JSON.stringify(data))
+      setfeaturedLoaded(true)
+    }
+    getHompageConfig()
+  }, [])
 
   return (
     <div className="App">
       <div className="left">
         <h1>Upload News</h1>
-        <form action='http://localhost:8800/uploadNewsByAdmin' method='post' preventDefault id="form">
+        <form action='http://156.67.219.185:8800/uploadNewsByAdmin' method='post' preventDefault id="form">
             <label htmlFor="">Title</label>
             <input type="text" placeholder="Title of News" required name="title" id="title" /><br />
             <label htmlFor="">Body</label>
@@ -45,9 +44,43 @@ function App() {
             <button type="submit" id="submit">UPLOAD</button>
         </form>
         <hr />
-        <div className="updateHomepage">
-            <h2>Top 3 Headlines</h2>
-        </div>
+      </div>
+      <div className="right">
+        <h1>Homepage Configuration</h1>
+        <form action="http://156.67.219.185:8800/editHomepageConfig" method='post' id='form2'>
+          <div id='form2div'>
+          <label htmlFor="h1">Headline 1</label>
+          <input type="number" placeholder='First Main Headline' name='headline_1' defaultValue={featuredLoaded ? parseInt(JSON.parse(featured)['headline_1']):''} /><br /><br />
+          <label htmlFor="">Sub Headline 1</label>
+          <input type="number" placeholder='First SubHeadline under Main Headline' name='headline_2' defaultValue={featuredLoaded ? parseInt(JSON.parse(featured)['headline_2']):''} />
+          <label htmlFor="">Sub Headline 1</label>
+          <input type="number" placeholder='Second SubHeadline under Main Headline' name='headline_3' defaultValue={featuredLoaded ? parseInt(JSON.parse(featured)['headline_3']):''} /><br /><br />
+          <label htmlFor="">Top Headlines</label>
+          {
+            featuredLoaded ? JSON.parse(featured)['latest_headlines'].map((i)=>{
+              return <div>
+                <input type="number" name="latest_headlines" placeholder='Latest Headline Number' defaultValue={parseInt(i)} /><br />
+              </div>
+            }):''
+          }
+          </div>
+          <button onClick={()=>{}}>Remove Headline --</button><br />
+          <button type='button' onClick={()=>{
+            const form=document.getElementById('form2div')
+            const input=document.createElement('input')
+            input.name="latest_headlines"
+            input.type="number"
+            input.placeholder="Latest Headline Number"
+            form.appendChild(input)
+            form.appendChild('br')
+          }}>Add Headline +</button><br />
+          {/* <input type="number" placeholder='Latest Headlines' /><br /> */}
+          {/* <input type="number" placeholder='Latest Headlines' /><br /> */}
+          {/* <input type="number" placeholder='Latest Headlines' /><br /> */}
+          {/* <input type="number" placeholder='Latest Headlines' /><br /> */}
+          <input type="number" placeholder='Latest Headlines' /><br />
+          <button type='submit'>Submit</button>
+        </form>
       </div>
     </div>
   );

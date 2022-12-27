@@ -36,24 +36,24 @@ app.get('/', (req, res)=>{
     res.send('Server Connected Successfully!!!')
     console.log('Server Connected!!!');
 })
+const homeConfig = JSON.parse(JSON.stringify({
+    "headline_1":"1",
+    "headline_2":"2",
+    "headline_3":"3",
+    "breaking_news":[""],
+    "india_featured":"india",
+    "politics_featured":"politics",
+    "finance_featured":"finance",
+    "world_featured":"world",
+    "business_featured":"business",
+    "entertainment_featured":"entertainment",
+    "technology_featured":"technology",
+    "education_featured":"education",
+    "health_featured":"health",
+    "latest_headlines":["4", "6", "8", "10", "12", "7", "11"]
+}))
 
 app.get('/homepageData', (req, res)=>{
-    const homeConfig = JSON.parse(JSON.stringify({
-        "headline_1":"1",
-        "headline_2":"2",
-        "headline_3":"3",
-        "breaking_news":[""],
-        "india_featured":"india",
-        "politics_featured":"politics",
-        "finance_featured":"finance",
-        "world_featured":"world",
-        "business_featured":"business",
-        "entertainment_featured":"entertainment",
-        "technology_featured":"technology",
-        "education_featured":"education",
-        "health_featured":"health",
-        "latest_headlines":["4", "6", "8", "10", "12", "7", "11"]
-    }))
     let obj = {}
         Object.keys(homeConfig).map((i)=>{
             console.log(i);
@@ -98,6 +98,26 @@ app.get('/homepageData', (req, res)=>{
     // res.json(obj)
     // res.json(obj)
     setTimeout(()=>{res.json(obj)}, 1000)
+})
+
+app.get('/getHomepageConfig', (req, res)=>{
+    res.json(homeConfig)
+})
+
+app.post('/editHomepageConfig', (req, res)=>{
+    homeConfig['headline_1']=req.body['headline_1']
+    homeConfig['headline_2']=req.body['headline_2']
+    homeConfig['headline_3']=req.body['headline_3']
+    const lh=req.body['latest_headlines']
+    const lh2=[]
+    lh.map((i)=>{
+        if (i!=''){
+            lh2.push(i)
+        }
+    })
+    homeConfig['latest_headlines']=lh2
+    res.send('Homepage edited Successfully!')
+    console.log(req.body);
 })
 
 app.get('/getCategoryNews', (req, res)=>{
