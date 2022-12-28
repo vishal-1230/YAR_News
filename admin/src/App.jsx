@@ -8,7 +8,7 @@ function App() {
 
   useEffect(()=>{
     async function getHompageConfig(){
-      const response = await fetch('http://localhost:8800/getHomepageConfig')
+      const response = await fetch('http://156.67.219.185:8800/getHomepageConfig')
       const data = await response.json()
 
       setfeatured(JSON.stringify(data))
