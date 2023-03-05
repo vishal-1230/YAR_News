@@ -2,6 +2,9 @@
     margin: 0 50px;
     /* border-top: rgba(0 ,0 ,0, 0.2) 0.01px dashed; */
 }
+.navCross{
+    display: none;
+}
 
 .navList{
     display: flex;
@@ -34,4 +37,38 @@ input[type="text"] {
 input[type="submit"] {
     height: 20px;
     /* width: 50px; */
+}
+
+@media only screen and (max-width: 1000px) {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        width: fit-content;
+        display: none;
+        margin: 0;
+        position: absolute;
+        top: 7rem;
+        background: #fff;
+        z-index: 100;
+        width: 100vw;
+        /* position: relative; */
+    }
+    .navCross{
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .navList{
+        flex-direction: column;
+        width: fit-content;
+        /* position: absolute; */
+        left: 0;
+    }
+    .navItem{
+        width: fit-content;
+        margin: 0;
+    }
 }

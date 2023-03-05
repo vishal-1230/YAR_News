@@ -7,6 +7,8 @@ import Instagram from '@mui/icons-material/Instagram'
 import Twitter from '@mui/icons-material/Twitter'
 import Search from '@mui/icons-material/Search'
 import Location from '@mui/icons-material/LocationOn'
+import { FaHamburger } from 'react-icons/fa'
+import {GiHamburgerMenu} from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import Calender from '@mui/icons-material/CalendarMonth'
 
@@ -34,6 +36,7 @@ function Header(props) {
         </div>
         <div className={styles.topHeader}>
             <div className={styles.date}><Calender className={styles.locationIcon} />&nbsp;{days[day]+', '+ date + ' ' + months[month] + ', ' + year}<br /><Location className={styles.locationIcon} />&nbsp;India</div>
+            <GiHamburgerMenu className={styles.menuBurger} onClick={()=>{document.getElementById('navbar').style.display='block'}} />
             <Link to='/'><div className={styles.logo}><img src={logo} className={styles.logoImg} alt="" /></div></Link>
             <div className={styles.tempEtc}>30 &#176;C <br /><b>NIFTY: </b><span style={{color: 'rgb(0, 200, 0)'}}>18,496.60</span><br /><b>SENSEX: </b><span style={{color:'red'}}>62,181.67</span></div>
         </div>

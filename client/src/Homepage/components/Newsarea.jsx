@@ -76,36 +76,8 @@ function Newsarea() {
             console.log('lhlhlh==>', JSON.stringify(data['latest_headlines']));
             setlHeadlines(JSON.stringify(data['latest_headlines']))
             setlHeadlinesLoaded(true)
-            // setlh1img(data['latest_headlines'][0][0].img)
-            // setlh2img(data['latest_headlines'][1][0].img)
-            // setlh3img(data['latest_headlines'][2][0].img)
-            // setlh4img(data['latest_headlines'][3][0].img)
-            // setlh5img(data['latest_headlines'][4][0].img)
-            // setlh6img(data['latest_headlines'][5][0].img)
-            // setlh7img(data['latest_headlines'][6][0].img)
-            // setlh1title(data['latest_headlines'][0][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh2title(data['latest_headlines'][1][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh3title(data['latest_headlines'][2][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh4title(data['latest_headlines'][3][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh5title(data['latest_headlines'][4][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh6title(data['latest_headlines'][5][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh7title(data['latest_headlines'][6][0].title.split(" ").splice(0,11).join(" ")+"...")
-            // setlh1text(data['latest_headlines'][0][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh2text(data['latest_headlines'][1][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh3text(data['latest_headlines'][2][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh4text(data['latest_headlines'][3][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh5text(data['latest_headlines'][4][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh6text(data['latest_headlines'][5][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
-            // setlh7text(data['latest_headlines'][6][0].smallBody.split(" ").splice(0,11).join(" ")+'...')
         }
         getNewsOverview()
-        // document.getElementById('indiaSmall').style=''
-        // document.getElementById('politicsSmall').style=''
-        // document.getElementById('financeSmall').style=''
-        // document.getElementById('worldSmall').style=''
-        // document.getElementById('businessSmall').style=''
-        // document.getElementById('entertainmentSmall').style=''
-        // document.getElementById(homeCategorySelected+'Small').style='border-top: #bbb 0.1px solid !important; border-bottom: 0 solid #000; border-right: #bbb 0.1px solid; border-left: 0.1px solid #bbb; font-weight: 600;'
     }, [])
   return (
       <div className={styles.newsArea}>
@@ -113,16 +85,16 @@ function Newsarea() {
             <div className={styles.mainThreeHeadlines}>
                 <div className={styles.mainHeadline} id='mainHeadline'>
                     <img src='' id='mainHeadlineImg' className={styles.mainHeadlineImage} alt="Main Headline" />
-                    <p className={styles.mainHeadlineTitle} id='mainHeadlineTitle'></p>
+                    <span className={styles.mainHeadlineTitle} id='mainHeadlineTitle'></span>
                 </div>
                 <div className={styles.subHeadlines} id='subHeadline'>
                     <div className={styles.headline2} id='subHeadline1'>
                         <img id='subHeadline1Img' src="" className={styles.headline2Image} alt="2nd Headline" />
-                        <p id='subHeadline1Title' className={styles.headline2Title}></p>
+                        <span id='subHeadline1Title' className={styles.headline2Title}></span>
                     </div>
                     <div className={styles.headline3} id='subHeadline2'>
                         <img id='subHeadline2Img' src="" className={styles.headline3Image} alt="3rd Headline" />
-                        <p className={styles.headline3Title} id='subHeadline2Title'></p>
+                        <span className={styles.headline3Title} id='subHeadline2Title'></span>
                     </div>
                 </div>
             </div>

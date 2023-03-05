@@ -102,3 +102,60 @@
     width: 200px;
     text-align: right;
 }
+.menuBurger{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .topThinBar{
+        display: none;
+    }
+    .topHeader{
+        flex-direction: row;
+        height: fit-content;
+        padding: 0;
+        width: 100vw;
+        text-align: center;
+        border: 0;
+    }
+    .header{
+        border: 0;
+        position: relative;
+    }
+    .date{
+        height: 1rem;
+        font-size: 0.9rem;
+        top: 0;
+        left: 0.5rem;
+        margin-top: 0;
+        position: absolute;
+        display: none;
+    }
+    .locationIcon{
+        font-size: 200px;
+    }
+    .tempEtc{
+        display: none;
+    }
+    
+    .logoImg{
+        width: 15rem;
+        height: 7rem;
+        object-fit: cover;
+        margin: 0;
+        /* margin-left: -50px; */
+        margin-right: 80px;
+        border: 0;
+        /* left: 50%; */
+        /* transform: translateX(-50%); */
+        /* position: absoluSte; */
+    }
+    .menuBurger{
+        display: block;
+        font-size: x-large;
+    }
+}

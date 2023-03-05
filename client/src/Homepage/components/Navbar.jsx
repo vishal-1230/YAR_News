@@ -28,7 +28,8 @@ function Navbar(props) {
   }
   setTimeout(colorize, 300)
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar} id='navbar'>
+      <span className={styles.navCross} onClick={()=>{document.getElementById('navbar').style.display='none'}}>&#x2716;</span>
         <ul className={styles.navList}>
             <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://yarmedia.in/india'><li className={styles.navItem} id='india'>India</li></a>
             <a style={{textDecoration: 'none', color:'black'}} onClick={window.location.reload} href='http://yarmedia.in/finance'><li className={styles.navItem} id='finance'>Finance</li></a>

@@ -56,6 +56,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 30px;
+    left: 0;
 }
 
 .subHeadlines{
@@ -100,6 +101,7 @@
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 30px;
+    left: 0;
 }
 
 .topHeadlinesTitle{
@@ -204,4 +206,72 @@
 
 .footer2{
 
+}
+
+@media only screen and (max-width: 1000px) {
+}
+
+@media only screen and (max-width: 600px) {
+    .mainHeadline{
+        width: 100vw;
+    }
+    .newsArea{
+        flex-direction: column;
+        margin: 10px 15px;
+        width: 100vw;
+        border: 0;
+        margin-top: 0;
+        padding-top: 10px;
+        border-top: 0.4px #555 dashed;
+    }
+    .mainThreeHeadlines{
+        left: 0;
+        width: 100vw;
+    }
+    .subHeadlines{
+        /* flex-direction: column; */
+        width: 100vw;
+    }
+    .headline2{
+        /* width: 100%; */
+        height: 10rem;
+    }
+    .headline2Image{
+        height: 10rem;
+    }
+    .headline3{
+        /* width: 100%; */
+        height: 10rem;
+    }
+    .headline3Image{
+        height: 10rem;
+    }
+    .mainHeadlineTitle, .headline2Title, .headline3Title{
+        font-size: 1rem;
+        /* padding: 1rem; */
+        left: 0;
+        padding: 0.4rem;
+        width: 95%;
+    }
+    .mainHeadlineTitle{
+        width: 96%;
+    }
+    .headline2Title{
+        width: 92%;
+        bottom: 0;
+    }
+    .headline3Title{
+        width: 92%;
+        bottom: 0;
+    }
+    .newsLeft{
+        border: 0;
+    }
+    .newsRight{
+        border: 0;
+        border-left: 0 solid #000;
+        margin-left: 0;
+        left: 0;
+        /* width: 100vw; */
+    }
 }
