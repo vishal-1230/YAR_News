@@ -16,7 +16,7 @@ function SingleNews(props) {
     console.log('params=>', params.nid);
     async function loadNews(){
       // alert('loading')
-      const response = await fetch(`http://156.67.219.185:8800/getNews?nid=${params.nid}`)
+      const response = await fetch(`https://156.67.219.185:8800/getNews?nid=${params.nid}`)
       const data = await response.json()
       console.log(data);
 
@@ -37,7 +37,7 @@ function SingleNews(props) {
 
   useEffect(()=>{
     async function loadFeatured(){
-      const response2 = await fetch(`http://156.67.219.185:8800/homepageData`)
+      const response2 = await fetch(`https://156.67.219.185:8800/homepageData`)
       const data2 = await response2.json()
       console.log('data2==>', data2);
       setfeaturedNews(JSON.stringify(data2['latest_headlines']))

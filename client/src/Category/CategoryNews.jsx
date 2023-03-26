@@ -12,8 +12,8 @@ function CategoryNews(props) {
 
   useEffect(()=>{
     async function loadNews(){
-      // const response = await fetch('http://156.67.219.185:8800/homepageData')
-      const response = await fetch(`http://156.67.219.185:8800/getCategoryNews?category=${props.category}`)
+      // const response = await fetch('https://156.67.219.185:8800/homepageData')
+      const response = await fetch(`https://156.67.219.185:8800/getCategoryNews?category=${props.category}`)
       const data = await response.json()
       console.log(data)
 
